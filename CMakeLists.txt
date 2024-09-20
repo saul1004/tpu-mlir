@@ -38,7 +38,9 @@ endif()
 # reference https://github.com/llvm/circt/blob/main/cmake/modules/AddCIRCT.cmake
 set(MLIR_BINARY_DIR ${CMAKE_INSTALL_PREFIX})
 
-find_package(MLIR REQUIRED CONFIG)
+#find_package(MLIR REQUIRED CONFIG)
+#add_subdirectory("/workspace/tpu-mlir/third_party/llvm-project")
+find_package(MLIR REQUIRED HINTS "/workspace/tpu-mlir/third_party/llvm-project/build")
 message(STATUS "Using MLIRConfig.cmake in: ${MLIR_DIR}")
 message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
 
