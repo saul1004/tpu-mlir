@@ -1,3 +1,18 @@
+/* -----------------------------------------------------------------------------
+ * Copyright (C) 2025, Electronics and Telecommunications Research Institute (ETRI)
+ * All rights reserved.
+ *
+ * @Author: Youngmok Ha
+ *
+ * This code includes an implementation of "DevicePlacementPass".
+ *
+ * "DevicePlacementPass" operates when an argument "dev-placement" is set for tpuc-opt
+ *  ex) tpuc-opt xxxx_origin.mlir --shape-infer --canonicalize --extra-optimize --deinit --dev-placement -o xxxx.mlir
+ *
+ * -----------------------------------------------------------------------------
+ */
+
+
 #include "tpu_mlir/Dialect/Top/Transforms/Passes.h"
 #include "tpu_mlir/Support/json.hpp"
 
