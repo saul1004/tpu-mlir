@@ -3,6 +3,7 @@ file(GLOB _sources
           Interfaces/*.cpp
           Canonicalize/*.cpp
           Transforms/*.cpp
+          Transforms/DevicePlacement/*.cpp
           Transforms/ProcessorOptimize/*.cpp
     )
 

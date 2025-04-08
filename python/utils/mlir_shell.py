@@ -73,7 +73,8 @@ def mlir_opt_for_top(mlirfile: str,
     cmd = ["tpuc-opt", mlirfile, "--shape-infer"]
     if len(add_postprocess) > 0:
         cmd.extend([f"--add-postprocess=\"type={add_postprocess}\""])
-    cmd.extend(["--canonicalize", "--extra-optimize", "-o", opt_mlirfile])
+#    cmd.extend(["--canonicalize", "--extra-optimize", "-o", opt_mlirfile])
+    cmd.extend(["--canonicalize", "--extra-optimize", "--deinit", "--dev-placement", "-o", opt_mlirfile]) # ymha: dev-placement
     log_file = ""
     if count_patterns:
         log_file = "top_patterns.log"

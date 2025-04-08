@@ -112,4 +112,10 @@ def AddPostprocess : Pass<"add-postprocess", "ModuleOp"> {
              "type of add-postprocess.">
   ];
 }
+
+def DevicePlacement : Pass<"dev-placement", "ModuleOp"> {
+  let summary = "place operations in mlir on devices";
+  let constructor = "createDevicePlacementPass()";
+  let dependentDialects = ["TopDialect"];
+}
 #endif
